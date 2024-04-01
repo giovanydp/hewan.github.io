@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web dengan Background Video</title>
+  <style>
+    * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.background-video {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Menghindari overflow dari video */
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  width: 80%; /* Mengatur lebar konten agar responsif */
+  max-width: 600px; /* Membatasi lebar maksimum konten */
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 0 auto; /* Menengahkan card */
+  margin-top: 50px; /* Memberikan ruang atas untuk card */
+  border: 5px solid transparent;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h2 {
+  margin-bottom: 10px;
+  color: #87CEEB;
+}
+
+.card p {
+  margin-bottom: 10px;
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px lime;
+}
+
+.yes-button {
+  background-color: cyan;
+  color: #32CD32;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #FFFFFF;
+}
+
+.yes-button:hover {
+  background-color: #0056b3;
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    width: 90%; /* Mengurangi lebar konten pada layar kecil */
+  }
+
+  .card {
+    margin-top: 30px; /* Mengurangi ruang atas untuk card pada layar kecil */
+  }
+}
+
+    .card:hover {
+      transform: translateY(-5px); /* Menggeser card ke atas saat disentuh */
+    }
+
+    .card h2 {
+      margin-bottom: 10px;
+      color: #87CEEB;
+    }
+
+    .card p {
+      margin-bottom: 10px;
+    }
+
+    .card img {
+      max-width: 100%;
+      border-radius: 5px;
+      margin-bottom: 10px;
+      box-shadow: 0 0 10px lime;
+    }
+
+    .yes-button {
+      background-color: cyan;
+      color: white;
+      cursor: pointer;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .yes-button:hover {
+      background-color: #0056b3;
+    }
+
+    .yes-button {
+  background-color: cyan;
+  color: #32CD32;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  text-shadow: 0 0 10px #FFFFFF; /* Efek teks bersinar dengan bayangan putih */
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="background-video">
+    <video autoplay muted loop>
+      <source src="Latarhewann.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="content">
+      <div class="card">
+        <h2>Burung Toucan</h2>
+        <p>Toucan adalah burung tropis dengan paruh besar dan berwarna cerah. Mereka ditemukan di Amerika Tengah dan Selatan. Paruh besar mereka membantu dalam mencari makanan dan termoregulasi.</p>
+        <img src="tukan.jpeg" alt="Gambar">
+        <a href="home.html">
+        <button class="yes-button">See More</button>
+        </a>
+      </div>
+</body>
+</html>
